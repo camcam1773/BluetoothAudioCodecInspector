@@ -8,7 +8,7 @@ The usage should be self-explanatory.
 
 # Build
 
-Standard .NET 6 SDK is required. Then just run `dotnet build -c Release`.
+Standard .NET 10 SDK is required. Then just run `dotnet build -c Release`.
 
 # License
 
