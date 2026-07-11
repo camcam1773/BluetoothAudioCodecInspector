@@ -15,3 +15,8 @@ jobs:
 
       - run: |
           dotnet build -c Release
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          path: BluetoothAudioCodecInspector\bin\Release
