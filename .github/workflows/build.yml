@@ -1,0 +1,22 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "!master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - run: |
+          dotnet build -c Release
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          path: BluetoothAudioCodecInspector\bin\Release
